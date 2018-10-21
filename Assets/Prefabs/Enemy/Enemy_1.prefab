@@ -200,6 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b191ef20eb540d4a07e546c9631fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  icon: {fileID: 0}
   spawnPoint: {fileID: 4843616038765510}
   fireRate: 3
   projectile: {fileID: 1350721281428752, guid: 2e37935f251e541ae9945817450cf746, type: 2}
