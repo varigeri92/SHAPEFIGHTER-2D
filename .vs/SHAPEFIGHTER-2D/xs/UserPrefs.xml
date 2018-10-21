@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{3187E8F5-A4A1-4F12-4532-A5D779EDD99B}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Gun.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Player.cs" Line="112" Column="26" />
+      <File FileName="Assets/Scripts/Gun.cs" Line="10" Column="2" />
+      <File FileName="Assets/Scripts/BasicGun.cs" Line="28" Column="17" />
+      <File FileName="Assets/Scripts/ProjectileBehaviour.cs" Line="22" Column="61" />
+      <File FileName="Assets/Scripts/FollowPlayer.cs" Line="20" Column="51" />
+      <File FileName="Assets/Obstacle.cs" Line="18" Column="33" />
+      <File FileName="Assets/ObstacleSpawner.cs" Line="63" Column="55" />
+      <File FileName="Assets/Scripts/EnemyFollow.cs" Line="89" Column="1" />
+      <File FileName="Assets/Scripts/EnemySpawner.cs" Line="30" Column="32" />
+      <File FileName="Assets/Scripts/Shield.cs" Line="22" Column="20" />
+      <File FileName="Assets/Scripts/BackgroundManager.cs" Line="30" Column="3" />
+      <File FileName="Assets/Scripts/InputManager.cs" Line="18" Column="6" />
+      <File FileName="Assets/Scripts/PowerUp.cs" Line="3" Column="17" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
