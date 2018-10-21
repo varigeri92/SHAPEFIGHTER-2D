@@ -183,7 +183,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   target: {fileID: 0}
   rotateSpeed: 400
-  FX: {fileID: 1312643002290678, guid: c8dabd6e4956f4aa9bae78d83f1886a5, type: 2}
+  FX: {fileID: 1371780899007676, guid: 4955035f9d4e24142863ae1b11aaa704, type: 2}
   attachPoints:
   - {fileID: 4843616038765510}
   activeGuns:
