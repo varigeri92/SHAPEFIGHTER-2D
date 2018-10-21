@@ -126,7 +126,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1420262902442594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.8927073, y: 2.5167809, z: -1.6111363}
+  m_LocalPosition: {x: -0.09, y: 2.5167809, z: -1.6111363}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4893524147842886}
@@ -176,7 +176,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -209,15 +209,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healt: 3
-  speed: 3
+  speed: 4
   rb: {fileID: 0}
   target: {fileID: 0}
   rotateSpeed: 200
-  FX: {fileID: 1312643002290678, guid: c8dabd6e4956f4aa9bae78d83f1886a5, type: 2}
-  attachPoints:
-  - {fileID: 4843616038765510}
-  activeGuns:
-  - {fileID: 114225513789164334}
+  FX: {fileID: 1371780899007676, guid: 4955035f9d4e24142863ae1b11aaa704, type: 2}
+  attachPoints: []
+  activeGuns: []
   kamikaze: 1
 --- !u!114 &114225513789164334
 MonoBehaviour:
@@ -230,6 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b191ef20eb540d4a07e546c9631fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  icon: {fileID: 0}
   spawnPoint: {fileID: 4843616038765510}
   fireRate: 3
   projectile: {fileID: 1350721281428752, guid: 2e37935f251e541ae9945817450cf746, type: 2}

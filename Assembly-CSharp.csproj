@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Collectable\CollectableGun.cs" />
     <Compile Include="Assets\Scripts\Collectable\PowerUp.cs" />
     <Compile Include="Assets\Scripts\Collectable\Shield.cs" />
+    <Compile Include="Assets\Scripts\DevTools\EmitParticles.cs" />
     <Compile Include="Assets\Scripts\FollowPlayer.cs" />
     <Compile Include="Assets\Scripts\GUNS\BasicGun.cs" />
     <Compile Include="Assets\Scripts\GUNS\DoubleGatling.cs" />
