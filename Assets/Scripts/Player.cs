@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
 	public delegate void PlayerDead();
 	public static event PlayerDead OnPlayerDeath;
 
+	public List<SelectorBehaviour> selectorBahaviours = new List<SelectorBehaviour>();
+
 	public TMPro.TMP_Text enemyCounterText;
 	int enemyCounter = 0;
 
@@ -33,7 +35,7 @@ public class Player : MonoBehaviour
 
 	void Start()
 	{
-		OnGunChanged();
+		SetBasicGun();
 		EnemyFollow.onEnemyDead += countEnemyes;
 	}
 	void countEnemyes(EnemyFollow enemy){
@@ -107,7 +109,7 @@ public class Player : MonoBehaviour
 			shieldText.text = "0";
 		}
 	}
-	private void Shoot()
+	void Shoot()
 	{
 		if (Input.GetAxis("Fire1") > 0.1) {
 			foreach (Gun gun in activeGuns) {
@@ -151,5 +153,33 @@ public class Player : MonoBehaviour
 	public void PickUpShield(int shield){
 		health += shield;
 		shieldText.text = health.ToString();
+	}
+	public void PickupGun(GameObject gun, GameObject icon){
+		bool alreadyGot = false;
+		Debug.Log("PickupCalled");
+
+		if (!alreadyGot) {
+			foreach (SelectorBehaviour selector in selectorBahaviours) {
+				if (selector.haschild == false) {
+					Debug.Log("SHOW IMAGE!");
+					selector.gun = gun;
+					selector.haschild = true;
+					Instantiate(icon, selector.gameObject.transform);
+					break;
+				} else if (selector.gun.name == gun.name) {
+					// add ammo
+				}
+			}
+		}
+	}
+	void SetBasicGun(){
+		activeGuns = new List<Gun>();
+		foreach (Transform t in attachPoints) {
+			if (t.GetComponentInChildren<Gun>() != null) {
+				Gun gun = t.GetComponentInChildren<Gun>();
+				activeGuns.Add(gun);
+				PickupGun(t.gameObject, gun.icon);
+			}
+		}
 	}
 }
