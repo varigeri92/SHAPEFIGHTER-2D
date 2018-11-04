@@ -67,6 +67,7 @@ public class SelectWeapon : MonoBehaviour {
 
 	// Use this for initialization
 	void Start()
+<<<<<<< HEAD
 	{
 		// slotPositions = InventoryPanel.GetComponentsInChildren<Transform>();
 		// marker.transform.localPosition = new Vector2(25,-27);
@@ -100,3 +101,25 @@ public class SelectWeapon : MonoBehaviour {
 		}
 	}
 }
+=======
+	{
+		// slotPositions = InventoryPanel.GetComponentsInChildren<Transform>();
+		marker.position = slotPositions[selected].position;
+	}
+	// Update is called once per frame
+	void Update () {
+		SelectElement();
+	}
+
+	IEnumerator MoveMarker(Transform target){
+		float distance = 0;
+		float duration = 0.25f;
+		Vector2 markerPos = marker.transform.position;
+		while(distance < 1){
+			distance += Time.deltaTime / duration;
+			marker.transform.position = Vector2.Lerp(markerPos,target.position,distance);
+			yield return new WaitForSeconds(Time.deltaTime);
+		}
+	}
+}
+>>>>>>> 0163458931f422547627997bffea49be1cb68eba

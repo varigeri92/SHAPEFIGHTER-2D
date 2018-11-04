@@ -53,6 +53,7 @@ public class EnemyFollow : MonoBehaviour {
 	}
 
 	private void FixedUpdate()
+<<<<<<< HEAD
 	{
 		if(!playeralive){
 			return;
@@ -116,3 +117,64 @@ public class EnemyFollow : MonoBehaviour {
 		Destroy(gameObject);
 	}
 }
+=======
+	{
+		Vector2 direction = (Vector2)target.position - rb.position;
+		direction.Normalize();
+		float rotateamount = Vector3.Cross(direction, transform.up).z;
+		rb.angularVelocity = -rotateamount * rotateSpeed;
+		float _speed = speed;
+		float distance = Vector2.Distance((Vector2)transform.position, (Vector2)target.position);
+
+		if (distance < 10){
+			if(!kamikaze){
+				Shoot();
+			}else{
+				_speed = 4;
+				rb.velocity = transform.up * _speed;
+			}
+
+		}
+		if(!kamikaze){
+			
+			if (distance < 5) {
+				_speed = 0;
+				rb.velocity = transform.right * speed;
+			} else {
+				_speed = speed;
+				rb.velocity = transform.up * _speed;
+			}
+
+			if (distance < 3) {
+				_speed = -speed;
+				rb.velocity = transform.up * _speed;
+			}
+		} else {
+			_speed = speed;
+			rb.velocity = transform.up * _speed;
+		}
+	}
+
+	void Shoot(){
+		foreach (Gun gun in activeGuns) {
+
+			gun.Shooting(false);
+
+		}
+	}
+
+	public void TakeDmg(int dmg){
+		healt -= dmg;
+		if(healt <= 0){
+			Die();
+		}
+	}
+	private void Die(){
+		if(onEnemyDead != null){
+			onEnemyDead(this);
+		}
+		Instantiate(FX,transform.position,Quaternion.identity);
+		Destroy(gameObject);
+	}
+}
+>>>>>>> 0163458931f422547627997bffea49be1cb68eba
