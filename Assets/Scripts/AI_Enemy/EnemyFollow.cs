@@ -19,8 +19,15 @@ public class EnemyFollow : MonoBehaviour {
 
 	public bool kamikaze;
 
+
+	bool playeralive = true;
 	// Use this for initialization
 	void OnEnable () {
+		Debug.LogWarning("The Script EnemyFollow on the GameObject: " + 
+		                 this.gameObject.name + 
+		                 " is outdated! Use 'BasicEnemy' instead!");
+		
+
 		target = GameObject.FindGameObjectWithTag("Player").transform;
 		rb = GetComponent<Rigidbody2D>();
 		Player.OnPlayerDeath += PlayerMeghalodott;
@@ -33,7 +40,7 @@ public class EnemyFollow : MonoBehaviour {
 	}
 
 	void PlayerMeghalodott(){
-		Debug.Log("Player meghalodott");
+		playeralive = false;
 	}
 
 	// Update is called once per frame
@@ -47,6 +54,10 @@ public class EnemyFollow : MonoBehaviour {
 
 	private void FixedUpdate()
 	{
+		if(!playeralive){
+			return;
+		}
+
 		Vector2 direction = (Vector2)target.position - rb.position;
 		direction.Normalize();
 		float rotateamount = Vector3.Cross(direction, transform.up).z;

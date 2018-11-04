@@ -5,34 +5,55 @@ using UnityEngine;
 public class SelectWeapon : MonoBehaviour {
 
 	public GameObject InventoryPanel;
+	public Player player;
 
 	public Transform marker;
 
 	public Transform[] slotPositions;
 	int selected = 0;
+	[SerializeField]
+	float speed;
+
+	IEnumerator _SelectAnimation;
+
+	bool keyPressed = false;
 
 
 	public void OnCollectablepickedUp(){
 		
 	}
 
-	void SelectElement(){
-		if (Input.GetKeyDown(KeyCode.E)) {
+	void SelectElement(float value){
+		if (value > 0 ) {
 			selected++;
 			if (selected > slotPositions.Length - 1) {
 				selected = 0;
 			}
-			marker.transform.position = slotPositions[selected].position;
-			// StartCoroutine(MoveMarker(slotPositions[selected]));
+			if(slotPositions[selected].GetComponent<SelectorBehaviour>().gun != null){
+				player.ChangeGun(slotPositions[selected].GetComponent<SelectorBehaviour>().gun);
+			}
+			// marker.transform.position = slotPositions[selected].position;
+			if(_SelectAnimation != null){
+				StopCoroutine(_SelectAnimation);
+			}
+			_SelectAnimation = MoveMarker(slotPositions[selected]);
+			StartCoroutine(_SelectAnimation);
 		}
-		else if(Input.GetKeyDown(KeyCode.Q))
+		else if(value < 0)
 		{
 			selected--;
 			if (selected < 0) {
 				selected = slotPositions.Length -1;
 			}
-			marker.transform.position = slotPositions[selected].position;
-			// StartCoroutine(MoveMarker(slotPositions[selected]));
+			if (slotPositions[selected].GetComponent<SelectorBehaviour>().gun != null) {
+				player.ChangeGun(slotPositions[selected].GetComponent<SelectorBehaviour>().gun);
+			}
+			// marker.transform.position = slotPositions[selected].position;
+			if (_SelectAnimation != null) {
+				StopCoroutine(_SelectAnimation);
+			}
+			_SelectAnimation = MoveMarker(slotPositions[selected]);
+			StartCoroutine(_SelectAnimation);
 		}
 	}
 
@@ -40,20 +61,37 @@ public class SelectWeapon : MonoBehaviour {
 		
 	}
 
+	void ChangeWeapon(GameObject gun){
+		player.ChangeGun(gun);
+	}
+
 	// Use this for initialization
 	void Start()
 	{
 		// slotPositions = InventoryPanel.GetComponentsInChildren<Transform>();
-		marker.position = slotPositions[selected].position;
+		// marker.transform.localPosition = new Vector2(25,-27);
+			//slotPositions[selected].position;
+
 	}
 	// Update is called once per frame
 	void Update () {
-		SelectElement();
+		float keyValue = Input.GetAxisRaw("D_Pad Y");
+
+
+
+		if (!keyPressed){
+			SelectElement(keyValue);
+			keyPressed = true;
+		}
+
+		if (keyValue == 0) {
+			keyPressed = false;
+		}
 	}
 
 	IEnumerator MoveMarker(Transform target){
 		float distance = 0;
-		float duration = 0.25f;
+		float duration = speed;
 		Vector2 markerPos = marker.transform.position;
 		while(distance < 1){
 			distance += Time.deltaTime / duration;

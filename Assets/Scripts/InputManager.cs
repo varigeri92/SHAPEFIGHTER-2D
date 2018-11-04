@@ -14,15 +14,15 @@ public class InputManager : MonoBehaviour {
 
 	void Update () {
 
-		// direction = new Vector2(Input.GetAxis(""), Input.GetAxis(""));
+		direction = new Vector2(Input.GetAxis("Right_Stick_X"), Input.GetAxis("Right_Stick_Y"));
 		// movement = new Vector2(Input.GetAxis(""),Input.GetAxis(""));
 
 	}
-	Vector2 GetMovement()
+	public Vector2 GetMovement()
 	{
 		return movement;
 	}
-	Vector2 GetDirection()
+	public Vector2 GetDirection()
 	{
 		return direction;
 	}

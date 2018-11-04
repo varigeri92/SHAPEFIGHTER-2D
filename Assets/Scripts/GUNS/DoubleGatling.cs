@@ -14,10 +14,15 @@ public class DoubleGatling : Gun{
 
 	public override void Shooting(bool isPlayer)
 	{
-		timer += fireRate * Time.deltaTime;
-		if (timer >= 1) {
-			Shoot(isPlayer);
-			timer = 0;
+		if(ammo > 0 || ammo == -999){
+			timer += fireRate * Time.deltaTime;
+			if (timer >= 1) {
+				if (ammo != -999){
+					ammo--;
+				}
+				Shoot(isPlayer);
+				timer = 0;
+			}
 		}
 	}
 
@@ -30,7 +35,7 @@ public class DoubleGatling : Gun{
 			} else {
 				go.layer = 11;
 			}
-			go.GetComponent<ProjectileBehaviour>().StartCountdown();
+			base.Playsound();
 		}
 	}
 }

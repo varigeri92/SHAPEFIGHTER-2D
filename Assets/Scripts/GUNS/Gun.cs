@@ -2,11 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gun : MonoBehaviour {
+public class Gun : MonoBehaviour
+{
 
+	public int ammo;
 	public GameObject icon;
+	AudioSource source;
 
-	public virtual void Shooting(bool isPlayer){
+	private void OnEnable()
+	{
+		source = GetComponent<AudioSource>();
+	}
+
+	public virtual void Shooting(bool isPlayer)
+	{
 		
+	}
+
+	public virtual void Playsound (){
+
+		source.Play();
+
 	}
 }

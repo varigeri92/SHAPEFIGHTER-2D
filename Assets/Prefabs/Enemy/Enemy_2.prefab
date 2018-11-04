@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 4838731662035390}
   - component: {fileID: 50588710185737666}
   - component: {fileID: 58597229283235782}
-  - component: {fileID: 114183313433083908}
+  - component: {fileID: 114722432419113584}
   m_Layer: 0
   m_Name: Enemy_2
   m_TagString: Enemy
@@ -197,26 +197,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &114183313433083908
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1420262902442594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b70b6cb1604245288123f3a85d9a518, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healt: 3
-  speed: 4
-  rb: {fileID: 0}
-  target: {fileID: 0}
-  rotateSpeed: 200
-  FX: {fileID: 1371780899007676, guid: 4955035f9d4e24142863ae1b11aaa704, type: 2}
-  attachPoints: []
-  activeGuns: []
-  kamikaze: 1
 --- !u!114 &114225513789164334
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -228,11 +208,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b191ef20eb540d4a07e546c9631fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ammo: 0
   icon: {fileID: 0}
   spawnPoint: {fileID: 4843616038765510}
   fireRate: 3
   projectile: {fileID: 1350721281428752, guid: 2e37935f251e541ae9945817450cf746, type: 2}
   projectileForce: 20
+--- !u!114 &114722432419113584
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1420262902442594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 945a17a04fb004a83bcdb44c5719dcd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyObject: {fileID: 11400000, guid: a0bc1f19bda514348a1645776d567fd0, type: 2}
 --- !u!212 &212058063028216998
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 4838731662035390}
   - component: {fileID: 50588710185737666}
   - component: {fileID: 58597229283235782}
-  - component: {fileID: 114183313433083908}
+  - component: {fileID: 114709668445215202}
   m_Layer: 0
   m_Name: Enemy_1
   m_TagString: Enemy
@@ -54,6 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4843616038765510}
   - component: {fileID: 114225513789164334}
+  - component: {fileID: 82864259896975080}
   m_Layer: 0
   m_Name: weapon
   m_TagString: Untagged
@@ -97,7 +98,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1420262902442594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.19, y: 2.57, z: -1.6111363}
+  m_LocalPosition: {x: -9.215508, y: 0.962486, z: -1.6111363}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4893524147842886}
@@ -167,28 +168,101 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &114183313433083908
-MonoBehaviour:
+--- !u!82 &82864259896975080
+AudioSource:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1420262902442594}
+  m_GameObject: {fileID: 1446531914109060}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b70b6cb1604245288123f3a85d9a518, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healt: 3
-  speed: 3
-  rb: {fileID: 0}
-  target: {fileID: 0}
-  rotateSpeed: 400
-  FX: {fileID: 1371780899007676, guid: 4955035f9d4e24142863ae1b11aaa704, type: 2}
-  attachPoints:
-  - {fileID: 4843616038765510}
-  activeGuns:
-  - {fileID: 114225513789164334}
-  kamikaze: 0
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a26e6bd92bfd6c043b21647e3bc62aa2, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &114225513789164334
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -200,11 +274,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b191ef20eb540d4a07e546c9631fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ammo: -999
   icon: {fileID: 0}
   spawnPoint: {fileID: 4843616038765510}
   fireRate: 3
   projectile: {fileID: 1350721281428752, guid: 2e37935f251e541ae9945817450cf746, type: 2}
   projectileForce: 20
+--- !u!114 &114709668445215202
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1420262902442594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 945a17a04fb004a83bcdb44c5719dcd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyObject: {fileID: 11400000, guid: 2718eee38806a4b54a808b0b4d3ed402, type: 2}
 --- !u!212 &212058063028216998
 SpriteRenderer:
   m_ObjectHideFlags: 1

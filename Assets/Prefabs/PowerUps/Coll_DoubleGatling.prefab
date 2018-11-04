@@ -178,6 +178,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0873fb197baa24023ae00ab175ece5b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefab: {fileID: 1897131634571996, guid: de7c98b5b00e347aa99245b0a301a164, type: 2}
+  icon: {fileID: 1974288720584050, guid: 31021c9bfc6e7488c883360341a2e95c, type: 2}
+  lifetime: 10
 --- !u!212 &212141053853330388
 SpriteRenderer:
   m_ObjectHideFlags: 1

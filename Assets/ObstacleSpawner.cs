@@ -57,7 +57,8 @@ public class ObstacleSpawner : MonoBehaviour {
 	private void SpawnPowerups()
 	{
 		int rnd = Random.Range(0, spawnPoints.Count);
-		GameObject go = Instantiate(powerUps[0], spawnPoints[rnd].position, Quaternion.Euler(Vector3.down));
+		int rndPowerup = Random.Range(0,powerUps.Count);
+		GameObject go = Instantiate(powerUps[rndPowerup], spawnPoints[rnd].position, Quaternion.Euler(Vector3.down));
 		Rigidbody2D rb = go.GetComponent<Rigidbody2D>();
 		int rnd2 = Random.Range(0, targets.Count);
 		float frnd = Random.Range(forceMin / 3, forceMax / 3);

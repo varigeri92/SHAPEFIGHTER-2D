@@ -8,6 +8,12 @@ public class ProjectileBehaviour : MonoBehaviour {
 	public int dmg;
 	public float speed;
 
+
+	private void OnEnable()
+	{
+		StartCountdown();
+	}
+
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
 		if(collision.collider.tag == "Player" || collision.collider.tag == "Enemy"){
@@ -27,7 +33,7 @@ public class ProjectileBehaviour : MonoBehaviour {
 			go.GetComponent<Player>().TakeDmg(dmg);
 
 		}else if(go.tag == "Enemy"){
-			go.GetComponent<EnemyFollow>().TakeDmg(dmg);
+			go.GetComponent<BasicEnemy>().TakeDmg(dmg);
 
 		}
 	}
