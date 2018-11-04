@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 3}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -65,7 +65,7 @@ MonoBehaviour:
     y: 0
     width: 1440
     height: 817
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &4
 MonoBehaviour:
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_MinSize: {x: 613, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 1
-  controlID: 572
+  controlID: 162
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_MinSize: {x: 613, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 573
+  controlID: 163
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 726
+  controlID: 87
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -250,10 +250,10 @@ MonoBehaviour:
     y: 0
     width: 820
     height: 767
-  m_MinSize: {x: 104, y: 221}
-  m_MaxSize: {x: 4004, y: 8021}
+  m_MinSize: {x: 104, y: 242}
+  m_MaxSize: {x: 4004, y: 8042}
   vertical: 1
-  controlID: 574
+  controlID: 12
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -272,8 +272,8 @@ MonoBehaviour:
     y: 0
     width: 820
     height: 394
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 104, y: 121}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 18}
@@ -299,8 +299,8 @@ MonoBehaviour:
     y: 394
     width: 820
     height: 373
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 104, y: 121}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -440,8 +440,8 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 561e0000
-    m_LastClickedID: 7766
+    m_SelectedIDs: a21d0000
+    m_LastClickedID: 7586
     m_ExpandedIDs: e4fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -503,19 +503,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Guns
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefabs/Guns
+  - Assets/Scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: /Users/gergelyovari-timar/SHAPEFIGHTER-2D
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 56.858215}
-    m_SelectedIDs: 52100000
-    m_LastClickedID: 4178
+    m_SelectedIDs: 36190000
+    m_LastClickedID: 6454
     m_ExpandedIDs: 00000000ec0e0000400f00005812000092140000a4140000201600002c19000036190000aa190000f2190000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -571,7 +571,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300008e5ff8ffd058f8ff18e6faff4a92f7ffc6380000f426000070260000e8e9fbff162700001e270000dc2700005a280000ba260000cc260000a6c2feffce7ffdff80250000903200000ce6f9ffb2250000542500006e250000d094ffff3e2c0000fa2b0000122a0000aa330000d82900005603f0ff14250000282500008837fcff008afcffe2aaf8ff3a55fffff4480000fc4800003c2b00008c2b0000f42a0000b42a0000c42a0000e42b0000342b0000942a0000542b00007c2b00000c2c00009c2a0000a661000042660000c46f0000cc6f000026a4e2ffc075feff882700003209e2ffc83fe2ff1827f7ff8cededffaa270000ce270000482900003a38f8ff7241f8ff163df8ff4ef3fcffb4280000164a0000000000006641000004070000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
